@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "nodemon app.js -w app.js -w src",
+    "dev": "nodemon server/app.js -w server/app.js -w src",
     "build": "vite build",
     "preview": "vite preview",
-    "seed": "node scripts/seed.js"
+    "seed": "node scripts/seed.js",
+    "initdb": "dropdb --if-exists table && createdb table"
   },
   "dependencies": {
     "express": "^4.18.2",
